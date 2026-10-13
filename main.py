@@ -16,28 +16,30 @@ CS1430_MEETINGS_PER_SEMESTER = 45
 # ---- FUNCTIONS: replace each return 0 ----
 
 def cost_per_semester(annual_cost):
-    """Give back what one semester costs."""
-    return 0
+    cost = annual_cost / SEMESTERS_PER_YEAR
+    return cost
 
 
 def cost_per_month(annual_cost):
-    """Give back what one month of the academic year costs."""
-    return 0
+    cost = annual_cost / MONTHS_PER_YEAR
+    return cost
 
 
 def cost_per_day(annual_cost):
-    """Give back what one class day costs."""
-    return 0
+    cost = annual_cost / SEMESTERS_PER_YEAR / CLASS_DAYS_PER_SEMESTER
+    return cost
 
 
 def cost_per_credit(annual_cost, credits):
-    """Give back what one credit costs. credits is the number taken this semester."""
-    return 0
+    cost = annual_cost / SEMESTERS_PER_YEAR / credits
+    return cost
 
 
 def cost_per_class(annual_cost, credits):
     """Give back what one 50-minute CS 1430 class meeting costs."""
-    return 0
+    cost = cost_per_credit(annual_cost, credits)
+    cost = cost * CS1430_CREDITS / CS1430_MEETINGS_PER_SEMESTER
+    return cost
 
 
 # ---- PROGRAM ----
@@ -45,16 +47,40 @@ def cost_per_class(annual_cost, credits):
 def main():
     # Ask for the total cost for one year here.
     # Then ask for the credits this semester.
+    total_cost = float(input("Total cost of one year: "))
+    sem_credits = int(input("Credits this semester: "))
 
     while True:
         # Show your menu here.
 
-        choice = input("Choose an option: ")
+        menu = ["1. Cost per semester",
+                "2. Cost per month",
+                "3. Cost per class day",
+                "4. Cost per credit",
+                "5. Cost per CS1430 class",
+                "Q. Quit"]
 
-        if choice == "Q":
+        options = {"1": (f"Cost per semester: ${cost_per_semester(total_cost):.2f}"),
+                    "2": (f"Cost per month: ${cost_per_month(total_cost):.2f}"),
+                    "3": (f"Cost per day: ${cost_per_day(total_cost):.2f}"),
+                    "4": (f"Cost per credit: ${cost_per_credit(total_cost, sem_credits):.2f}"),
+                    "5": (f"Cost per class: ${cost_per_class(total_cost, sem_credits):.2f}"),
+                    "q": None}
+
+        for i in menu:
+            print(f"    {i}")
+
+        choice = input("Choose an option: ").lower()
+        choice = options[choice.lower()]
+
+        if choice == None:
             break
-
+        else:
+            print(choice)
+        
+        print("Thanks for running the program!")
         # Add a branch for each menu option here.
+        
 
 
 # ---- LAUNCH: do not change ----
