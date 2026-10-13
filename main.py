@@ -11,7 +11,7 @@ MONTHS_PER_YEAR = 9
 CLASS_DAYS_PER_SEMESTER = 75
 CS1430_CREDITS = 3
 CS1430_MEETINGS_PER_SEMESTER = 45
-
+COST_OF_PAPER = 0.06 # 6 cents per paper
 
 # ---- FUNCTIONS: replace each return 0 ----
 
@@ -41,7 +41,9 @@ def cost_per_class(annual_cost, credits):
     cost = cost * CS1430_CREDITS / CS1430_MEETINGS_PER_SEMESTER
     return cost
 
-
+def papers_printable(annual_cost):
+    cost = annual_cost // COST_OF_PAPER
+    return int(cost)
 # ---- PROGRAM ----
 
 def main():
@@ -58,6 +60,7 @@ def main():
                 "3. Cost per class day",
                 "4. Cost per credit",
                 "5. Cost per CS1430 class",
+                "6. How many pieces of paper can I print with the money i spend on college?",
                 "Q. Quit"]
 
         options = {"1": (f"Cost per semester: ${cost_per_semester(total_cost):.2f}"),
@@ -65,6 +68,7 @@ def main():
                     "3": (f"Cost per day: ${cost_per_day(total_cost):.2f}"),
                     "4": (f"Cost per credit: ${cost_per_credit(total_cost, sem_credits):.2f}"),
                     "5": (f"Cost per class: ${cost_per_class(total_cost, sem_credits):.2f}"),
+                    "6": (f"Papers printed: {papers_printable(total_cost)}"),
                     "q": None}
 
         for i in menu:
