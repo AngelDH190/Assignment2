@@ -4,11 +4,11 @@ Points : 40 / 40  (from check.py; counts only when the Git and GitHub checks pas
 CS 1430 Assignment 2: The Cost of College
 GitHub user : AngelDH190
 Repository  : https://github.com/AngelDH190/Assignment2
-Commit      : 2ab0ffd5c62eaf4d91aafd6cbb8db1ae1243749f
-Message     : assignment done
+Commit      : aaa5dc3e9e53ef2fe26b072f6c9376520065b803
+Message     : print change
 Author      : Angel Diaz <diazhernanda@uwplatt.edu>
-Committed   : 2026-10-13T10:33:37-05:00
-Checked     : 2026-10-13 10:34:34 Central Daylight Time
+Committed   : 2026-10-13T12:21:17-05:00
+Checked     : 2026-10-13 12:21:43 Central Daylight Time
 Python      : 3.14.7
 
 ================================================================
@@ -53,7 +53,6 @@ Total cost of one year: Credits this semester:     1. Cost per semester
     5. Cost per CS1430 class
     Q. Quit
 Choose an option: Cost per semester: $7300.50
-Thanks for running the program!
     1. Cost per semester
     2. Cost per month
     3. Cost per class day
@@ -61,7 +60,6 @@ Thanks for running the program!
     5. Cost per CS1430 class
     Q. Quit
 Choose an option: Cost per month: $1622.33
-Thanks for running the program!
     1. Cost per semester
     2. Cost per month
     3. Cost per class day
@@ -69,7 +67,6 @@ Thanks for running the program!
     5. Cost per CS1430 class
     Q. Quit
 Choose an option: Cost per day: $97.34
-Thanks for running the program!
     1. Cost per semester
     2. Cost per month
     3. Cost per class day
@@ -77,7 +74,6 @@ Thanks for running the program!
     5. Cost per CS1430 class
     Q. Quit
 Choose an option: Cost per credit: $486.70
-Thanks for running the program!
     1. Cost per semester
     2. Cost per month
     3. Cost per class day
@@ -85,11 +81,10 @@ Thanks for running the program!
     5. Cost per CS1430 class
     Q. Quit
 Choose an option: Cost per class: $32.45
-Thanks for running the program!
     1. Cost per semester
     2. Cost per month
     3. Cost per class day
     4. Cost per credit
     5. Cost per CS1430 class
     Q. Quit
-Choose an option:
+Choose an option: Thanks for running the program!
