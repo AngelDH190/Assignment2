@@ -74,11 +74,12 @@ def main():
         choice = options[choice.lower()]
 
         if choice == None:
+            print("Thanks for running the program!")
             break
         else:
             print(choice)
         
-        print("Thanks for running the program!")
+        
         # Add a branch for each menu option here.
         
 
