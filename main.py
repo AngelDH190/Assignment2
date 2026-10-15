@@ -42,8 +42,8 @@ def cost_per_class(annual_cost, credits):
     return cost
 
 def papers_printable(annual_cost):
-    cost = annual_cost // COST_OF_PAPER
-    return int(cost)
+    paper = annual_cost // COST_OF_PAPER
+    return int(paper)
 # ---- PROGRAM ----
 
 def main():
@@ -63,12 +63,12 @@ def main():
                 "6. How many pieces of paper can I print with the money i spend on college?",
                 "Q. Quit"]
 
-        options = {"1": (f"Cost per semester: ${cost_per_semester(total_cost):.2f}"),
-                    "2": (f"Cost per month: ${cost_per_month(total_cost):.2f}"),
-                    "3": (f"Cost per day: ${cost_per_day(total_cost):.2f}"),
-                    "4": (f"Cost per credit: ${cost_per_credit(total_cost, sem_credits):.2f}"),
-                    "5": (f"Cost per class: ${cost_per_class(total_cost, sem_credits):.2f}"),
-                    "6": (f"Papers printed: {papers_printable(total_cost)}"),
+        options = {"1": (f"Cost per semester: ${cost_per_semester(total_cost):,.2f}"),
+                    "2": (f"Cost per month: ${cost_per_month(total_cost):,.2f}"),
+                    "3": (f"Cost per day: ${cost_per_day(total_cost):,.2f}"),
+                    "4": (f"Cost per credit: ${cost_per_credit(total_cost, sem_credits):,.2f}"),
+                    "5": (f"Cost per class: ${cost_per_class(total_cost, sem_credits):,.2f}"),
+                    "6": (f"Papers printed: {papers_printable(total_cost):,}"),
                     "q": None}
 
         for i in menu:
